@@ -1,11 +1,15 @@
 // Assignment Code
-
+var generateBtn = document.querySelector("#generate");
 
 // get reference to the # generate element
 function generatePassword() {
+  var min = 8;
+  var max = 127;
   var result = ""
   var passwordLength = prompt("How many characters do you want in your password")
   console.log(passwordLength)
+
+
 
 // choosing characters for password
   var uppercase = confirm("Would you like to use capital letters in your password?")
@@ -24,21 +28,46 @@ var chosenArray = []
 if(uppercase) {
 chosenArray = chosenArray.concat(uppercaseArray);
 }
+else {
+  window.alert("No uppercase letters will be in the password");
+}
 if(lowercase) {
   chosenArray = chosenArray.concat(lowercaseArray);
 }
-if(numbers) {
-    chosenArray = chosenArray.concat(numbersArray);
+else {
+  window.alert("No lowercase letters will be in the password");
 }
+
+if(numbers) {
+    chosenArray = chosenArray.concat(numberArray);
+    window.alert("number will be used");
+}
+else {
+  window.alert("no numbers");
+}
+
   if(symbols) {
       chosenArray = chosenArray.concat(symbolArray);
 }
+else {
+  window.alert("No lowercase letters will be in the password");
+}
+
+// display contetn of chosenArray 
+console.log(chosenArray)
         
+// for loop for randimization
+for (var i = 0; i < passwordLength; i++) {
+  var randomNumber = Math.floor(Math.random() * chosenArray.length)
+  var letter = chosenArray[randomNumber]
+  result = result + letter 
 
 }
 
+return result;
 
-var generateBtn = document.querySelector("#generate");
+}
+
 
 
 // Write password to the #password input
