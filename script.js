@@ -12,6 +12,14 @@ function generatePassword() {
   var lowercase = confirm("Would you like to use lowercase letters in your password?")
   var numbers = confirm("Would you like to use numbers in your password?")
   var symbols = confirm("Would you like to use symbols in your password?")
+
+  // arrays of characters to pick from
+var uppercaseArray = ["A", "B", "C", "D"]
+var lowercaseArray = ["a", "b", "c", "d"]
+var symbolArray = ["!", ]
+var numberArray = ["1", "2" ]
+
+
 }
 
 
