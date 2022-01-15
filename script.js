@@ -14,11 +14,26 @@ function generatePassword() {
   var symbols = confirm("Would you like to use symbols in your password?")
 
   // arrays of characters to pick from
-var uppercaseArray = ["A", "B", "C", "D"]
+var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H",]
 var lowercaseArray = ["a", "b", "c", "d"]
 var symbolArray = ["!", ]
-var numberArray = ["1", "2" ]
+var numberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var chosenArray = []
 
+// if statements 
+if(uppercase) {
+chosenArray = chosenArray.concat(uppercaseArray);
+}
+if(lowercase) {
+  chosenArray = chosenArray.concat(lowercaseArray);
+}
+if(numbers) {
+    chosenArray = chosenArray.concat(numbersArray);
+}
+  if(symbols) {
+      chosenArray = chosenArray.concat(symbolArray);
+}
+        
 
 }
 
