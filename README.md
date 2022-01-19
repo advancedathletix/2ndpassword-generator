@@ -1,5 +1,7 @@
 # 2ndpassword-generator
 
+<img src="images/image1.png.png">
+
 In this project I first added a prompt to ask how many character you want in your password when you click the generate password button
 
 I then added a confirm alert to ask if you wanted uppercase, lower case,numbers and, or symbols in your password

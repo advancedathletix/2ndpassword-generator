@@ -4,11 +4,18 @@ var generateBtn = document.querySelector("#generate");
 // get reference to the # generate element
 function generatePassword() {
   var min = 8;
-  var max = 127;
+  var max = 128;
   var result = ""
-  var passwordLength = prompt("How many characters do you want in your password")
+  var passwordLength = prompt("How many characters do you want in your password?  *Must be between 8 and 128 or password will not generate")
   console.log(passwordLength)
+  if (passwordLength >= 8 && passwordLength <= 128){
 
+    console.log("true")
+  }
+else {
+  window.alert("You must choose between 8 and 128 characters for your password. Please try again :)")
+  return
+}
 
 
 // choosing characters for password
